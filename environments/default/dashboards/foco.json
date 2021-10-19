@@ -19,7 +19,7 @@
   "links": [],
   "panels": [
     {
-      "datasource": "NYC",
+      "datasource": "FOCO",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -146,7 +146,7 @@
   },
   "timepicker": {},
   "timezone": "",
-  "title": "NYC",
+  "title": "FOCO",
   "uid": "vLpEX2eGz",
   "version": 2
 }

@@ -4,19 +4,21 @@ local grafana = import 'grafana/grafana.libsonnet';
   prometheus:
     grafana.datasource.new(
       'Prometheus',
-      'http://prometheus-server.prometheus',
+      'http://prometheus.default.svc.cluster.local/prometheus',
       'prometheus',
       true,
     ) +
     grafana.datasource.withHttpMethod('POST'),
   sun_and_moon:
     grafana.datasource.new(
-      'NYC',
+      'FOCO',
       null,
       'fetzerch-sunandmoon-datasource',
     ) +
     grafana.datasource.withJsonData({
-      latitude: 40.7128,
-      longitude: -74.0060,
+      latitude: 40.5555,
+      longitude: -105.1382,
     }),
+
+
 }
