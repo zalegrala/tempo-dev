@@ -19,6 +19,4 @@ local grafana = import 'grafana/grafana.libsonnet';
       latitude: 40.5555,
       longitude: -105.1382,
     }),
-
-
 }

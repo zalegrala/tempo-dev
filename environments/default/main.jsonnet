@@ -26,7 +26,9 @@ local tempo = import 'tempo/tempo.libsonnet';
         opencensus: null,
         jaeger: {
           protocols: {
-            thrift_http: null,
+            grpc: {
+              endpoint: '0.0.0.0:14250',
+            },
           },
         },
       },
@@ -72,6 +74,7 @@ local tempo = import 'tempo/tempo.libsonnet';
     container.withPortsMixin([
       containerPort.new('opencensus', 55678),
       containerPort.new('jaeger-http', 14268),
+      containerPort.new('jaeger-grpc', 14250),
     ]),
 
   tempo_ingester_container+::
