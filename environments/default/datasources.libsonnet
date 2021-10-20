@@ -9,6 +9,12 @@ local grafana = import 'grafana/grafana.libsonnet';
       true,
     ) +
     grafana.datasource.withHttpMethod('POST'),
+  tempo:
+    grafana.datasource.new(
+      'Tempo',
+      'http://query-frontend',
+      'tempo',
+    ),
   sun_and_moon:
     grafana.datasource.new(
       'FOCO',

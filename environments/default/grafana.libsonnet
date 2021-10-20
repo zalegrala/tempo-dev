@@ -16,6 +16,7 @@ grafana
 // // Datasources
 + grafana.addDatasource('Prometheus', datasources.prometheus)
 + grafana.addDatasource('FOCO', datasources.sun_and_moon)
++ grafana.addDatasource('tempo', datasources.tempo)
 
 // // Dashboards
 // + grafana.addDashboard('node-exporter-full', dashboards.node_exporter, 'Node Exporter')
