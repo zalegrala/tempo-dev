@@ -85,6 +85,16 @@
       "source": {
         "git": {
           "remote": "https://github.com/grafana/jsonnet-libs.git",
+          "subdir": "mixin-utils"
+        }
+      },
+      "version": "2ed138b205717af721af57b572bc7cd63bda62fd",
+      "sum": "v6fuqqQp9rHZbsxN9o79QzOpUlwYZEJ84DxTCZMCYeU="
+    },
+    {
+      "source": {
+        "git": {
+          "remote": "https://github.com/grafana/jsonnet-libs.git",
           "subdir": "nginx-directory"
         }
       },
@@ -135,11 +145,11 @@
       "source": {
         "git": {
           "remote": "https://github.com/grafana/tempo.git",
-          "subdir": "operations/jsonnet/microservices"
+          "subdir": "operations/tempo-mixin"
         }
       },
-      "version": "0dbc48fcbcc31091067e8e9ddc4f753f740e6b4f",
-      "sum": "M0CU8ytVoDzTrjzOgQYYPoIORMVorjLd76kgsVoM7F0="
+      "version": "68f3ef5acc3669356b62ebb8236c1e3c0b23da3f",
+      "sum": "hBl2J5o1h8rShiM7aGKPX9B9BkCNXaqXquvgvlroqNY="
     },
     {
       "source": {
