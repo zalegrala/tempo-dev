@@ -19,8 +19,9 @@ grafana
 + grafana.addDatasource('tempo', datasources.tempo)
 
 // // Dashboards
-// + grafana.addDashboard('node-exporter-full', dashboards.node_exporter, 'Node Exporter')
++ grafana.addDashboard('node-exporter-full', dashboards.node_exporter, 'Node Exporter')
 + grafana.addDashboard('foco', dashboards.foco, 'Sun and Moon')
++ grafana.addDashboard('tempoOperational', dashboards.tempo_operational, 'Tempo')
 
 // // Mixins
 + grafana.addMixinDashboards(mixins)

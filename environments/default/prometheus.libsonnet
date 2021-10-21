@@ -34,6 +34,8 @@ prometheus {
       // `scrape_configs.kubernetes_pods`.
       scrape_configs.kube_dns,
 
+      scrape_configs.kubernetes_state_metrics,
+
       // This scrape config gathers all kubelet metrics.
       // scrape_configs.kubelet($._config.prometheus_api_server_address),
       // + (

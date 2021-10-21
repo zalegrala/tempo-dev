@@ -90,6 +90,11 @@
       tempoPushUrl: 'http://distributor',
       tempoQueryUrl: 'http://query-frontend:%s' % $._config.port,
       tempoOrgId: '',
+      tempoRetentionDuration: '',
+      tempoSearchBackoffDuration: '',
+      tempoReadBackoffDuration: '',
+      tempoWriteBackoffDuration: '',
+
     },
     ballast_size_mbs: '1024',
     port: 3200,
