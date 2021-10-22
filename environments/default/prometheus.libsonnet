@@ -1,14 +1,18 @@
+local ksm = import 'github.com/grafana/jsonnet-libs/kube-state-metrics/main.libsonnet';
 local prometheus = import 'prometheus/prometheus.libsonnet';
 local scrape_configs = import 'prometheus/scrape_configs.libsonnet';
 
+local namespace = 'default';
+local cluster = 'k3d-tempo';
+
 prometheus {
   _config+:: {
-    cluster_name: 'tempo',
-    namespace: 'default',
+    cluster_name: cluster,
+    namespace: namespace,
   },
-}
+} +
 
-+ {
+{
   prometheus_config:: {
     global: {
       scrape_interval: '15s',
@@ -19,53 +23,19 @@ prometheus {
       'recording/recording.rules',
     ],
 
-    // alerting: {
-    //   alertmanagers: prometheus.withAlertmanagers(
-    //     $._config.alertmanagers,
-    //     $._config.cluster_name
-    //   ).prometheus_config.alerting.alertmanagers,
-    // },
-
     scrape_configs: [
-      // Grafana Labs' battle tested scrape config for scraping kubernetes pods.
       scrape_configs.kubernetes_pods,
-
-      // kube-dns does not adhere to the conventions set out by
-      // `scrape_configs.kubernetes_pods`.
       scrape_configs.kube_dns,
+    ],
+  },
+} +
 
-      scrape_configs.kubernetes_state_metrics,
+{
+  ksm: ksm.new(namespace),
 
-      // This scrape config gathers all kubelet metrics.
-      // scrape_configs.kubelet($._config.prometheus_api_server_address),
-      // + (
-      //   // Couldn't get prometheus to validate the kubelet cert for scraping, so
-      //   // don't bother for now.
-      //   if $._config.prometheus_insecure_skip_verify
-      //   then scrape_configs.insecureSkipVerify
-      //   else {}
-      // ),
-
-      // This scrape config gathers cAdvisor metrics.
-      // scrape_configs.cadvisor($._config.prometheus_api_server_address)
-      // + (
-      //   if $._config.prometheus_insecure_skip_verify
-      //   then scrape_configs.insecureSkipVerify
-      //   else {}
-      // ),
-
-      // If running on GKE, you cannot scrape API server pods, and must instead
-      // scrape the API server service endpoints.  On AKS this doesn't work.
-      // (
-      //   if $._config.scrape_api_server_endpoints
-      //   then scrape_configs.kubernetes_api(role='endpoints')  // GKE
-      //   else scrape_configs.kubernetes_api(role='service')  // AKS et al.
-      // )
-      // + (
-      //   if $._config.prometheus_insecure_skip_verify
-      //   then scrape_configs.insecureSkipVerify
-      //   else {}
-      // ),
+  prometheus_config+: {
+    scape_configs+: [
+      ksm.scrape_config(namespace),
     ],
   },
 }
