@@ -145,6 +145,16 @@
       "source": {
         "git": {
           "remote": "https://github.com/grafana/tempo.git",
+          "subdir": "operations/jsonnet/microservices"
+        }
+      },
+      "version": "dee08207802e2e748c5a2fde881094a062da10f2",
+      "sum": "j9//zLKyCTJ2ITW8ybBQ1W/CPoAntFo8Bgls+iyEb3I="
+    },
+    {
+      "source": {
+        "git": {
+          "remote": "https://github.com/grafana/tempo.git",
           "subdir": "operations/tempo-mixin"
         }
       },
