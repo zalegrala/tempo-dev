@@ -1,5 +1,5 @@
+local tempo = import 'microservices/tempo.libsonnet';
 local minio = import 'minio/minio.libsonnet';
-local tempo = import 'tempo/tempo.libsonnet';
 
 minio +
 
