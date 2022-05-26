@@ -18,7 +18,7 @@
           "subdir": "grafana"
         }
       },
-      "version": "9c8c858704450677f7e4c28d3e03a672faf21e4f",
+      "version": "39e2b2ae64341d41ad0bf00a43998deb487f158f",
       "sum": "7rANfqY8ERvoABHbwoGsdGpUeHxxYCSVOcM4Eky4QtQ="
     },
     {
@@ -28,7 +28,7 @@
           "subdir": "grafana-builder"
         }
       },
-      "version": "9c8c858704450677f7e4c28d3e03a672faf21e4f",
+      "version": "39e2b2ae64341d41ad0bf00a43998deb487f158f",
       "sum": "TieGrr7GyKjURk1+wXHFpdoCiwNaIVfZvyc5mbI9OM0="
     },
     {
@@ -38,7 +38,7 @@
           "subdir": "ksonnet-util"
         }
       },
-      "version": "9c8c858704450677f7e4c28d3e03a672faf21e4f",
+      "version": "39e2b2ae64341d41ad0bf00a43998deb487f158f",
       "sum": "xo1A7iYvJ7OZ64q2dOZY0G8FGHHt+t/+vEJW3bnXHyk="
     },
     {
@@ -48,7 +48,7 @@
           "subdir": "kube-state-metrics"
         }
       },
-      "version": "9c8c858704450677f7e4c28d3e03a672faf21e4f",
+      "version": "39e2b2ae64341d41ad0bf00a43998deb487f158f",
       "sum": "Zot8z80+8wDhelpW4h+Kui8SAW/V2Ve0xuE0EcMroWA="
     },
     {
@@ -58,8 +58,18 @@
           "subdir": "memcached"
         }
       },
-      "version": "9c8c858704450677f7e4c28d3e03a672faf21e4f",
+      "version": "39e2b2ae64341d41ad0bf00a43998deb487f158f",
       "sum": "8hXTN4QOMkpad75LESkdfRD4/Sl81fMqZcD0ZPx2SNc="
+    },
+    {
+      "source": {
+        "git": {
+          "remote": "https://github.com/grafana/jsonnet-libs.git",
+          "subdir": "mixin-utils"
+        }
+      },
+      "version": "39e2b2ae64341d41ad0bf00a43998deb487f158f",
+      "sum": "v6fuqqQp9rHZbsxN9o79QzOpUlwYZEJ84DxTCZMCYeU="
     },
     {
       "source": {
@@ -68,7 +78,7 @@
           "subdir": "prometheus/"
         }
       },
-      "version": "9c8c858704450677f7e4c28d3e03a672faf21e4f",
+      "version": "39e2b2ae64341d41ad0bf00a43998deb487f158f",
       "sum": "m0X+B0CdfOZNufu+oZozv8oyoXrNSVtR52fI3DuqPQo="
     },
     {
