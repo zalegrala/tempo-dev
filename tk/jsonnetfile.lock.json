@@ -1,0 +1,116 @@
+{
+  "version": 1,
+  "dependencies": [
+    {
+      "source": {
+        "git": {
+          "remote": "https://github.com/grafana/agent.git",
+          "subdir": "production/tanka/grafana-agent"
+        }
+      },
+      "version": "a47771a8673c2f0d26b12ac1e7e26caf5349e136",
+      "sum": "gE9GArW7GX0CnKE9P3UOJ+1LQoIQFUuyupIlJVdRvWI="
+    },
+    {
+      "source": {
+        "git": {
+          "remote": "https://github.com/grafana/jsonnet-libs.git",
+          "subdir": "grafana"
+        }
+      },
+      "version": "9c8c858704450677f7e4c28d3e03a672faf21e4f",
+      "sum": "7rANfqY8ERvoABHbwoGsdGpUeHxxYCSVOcM4Eky4QtQ="
+    },
+    {
+      "source": {
+        "git": {
+          "remote": "https://github.com/grafana/jsonnet-libs.git",
+          "subdir": "grafana-builder"
+        }
+      },
+      "version": "9c8c858704450677f7e4c28d3e03a672faf21e4f",
+      "sum": "TieGrr7GyKjURk1+wXHFpdoCiwNaIVfZvyc5mbI9OM0="
+    },
+    {
+      "source": {
+        "git": {
+          "remote": "https://github.com/grafana/jsonnet-libs.git",
+          "subdir": "ksonnet-util"
+        }
+      },
+      "version": "9c8c858704450677f7e4c28d3e03a672faf21e4f",
+      "sum": "xo1A7iYvJ7OZ64q2dOZY0G8FGHHt+t/+vEJW3bnXHyk="
+    },
+    {
+      "source": {
+        "git": {
+          "remote": "https://github.com/grafana/jsonnet-libs.git",
+          "subdir": "kube-state-metrics"
+        }
+      },
+      "version": "9c8c858704450677f7e4c28d3e03a672faf21e4f",
+      "sum": "Zot8z80+8wDhelpW4h+Kui8SAW/V2Ve0xuE0EcMroWA="
+    },
+    {
+      "source": {
+        "git": {
+          "remote": "https://github.com/grafana/jsonnet-libs.git",
+          "subdir": "memcached"
+        }
+      },
+      "version": "9c8c858704450677f7e4c28d3e03a672faf21e4f",
+      "sum": "8hXTN4QOMkpad75LESkdfRD4/Sl81fMqZcD0ZPx2SNc="
+    },
+    {
+      "source": {
+        "git": {
+          "remote": "https://github.com/grafana/jsonnet-libs.git",
+          "subdir": "prometheus/"
+        }
+      },
+      "version": "9c8c858704450677f7e4c28d3e03a672faf21e4f",
+      "sum": "m0X+B0CdfOZNufu+oZozv8oyoXrNSVtR52fI3DuqPQo="
+    },
+    {
+      "source": {
+        "git": {
+          "remote": "https://github.com/grafana/loki.git",
+          "subdir": "production/ksonnet/loki-simple-scalable"
+        }
+      },
+      "version": "afa53f19398c8cf37b9a4b858a988df6cc79a3ef",
+      "sum": "oRFkYo16S/Cuo+4C6ppZUTgMjn+pxXg5n2RCNMLeqU4="
+    },
+    {
+      "source": {
+        "git": {
+          "remote": "https://github.com/grafana/loki.git",
+          "subdir": "production/ksonnet/promtail"
+        }
+      },
+      "version": "afa53f19398c8cf37b9a4b858a988df6cc79a3ef",
+      "sum": "qtEX2/eNDc3MFIFFlNBK9HmJJTPtmMzl+EPnaq2SVlo="
+    },
+    {
+      "source": {
+        "git": {
+          "remote": "https://github.com/jsonnet-libs/k8s-libsonnet.git",
+          "subdir": "1.21"
+        }
+      },
+      "version": "78379f6b2c1438b4467f47d04e08f16b4b22e5ba",
+      "sum": "fTkO1kHecpISHv+BkMh1iSDYcevDFfJmxwFrBWvZdNE="
+    },
+    {
+      "source": {
+        "git": {
+          "remote": "https://github.com/ksonnet/ksonnet-lib.git",
+          "subdir": "ksonnet.beta.4"
+        }
+      },
+      "version": "0d2f82676817bbf9e4acf6495b2090205f323b9f",
+      "sum": "ur22hPQq0JAPBxm8hNMcwjumj4MkozDwOKiGZvVMYh4="
+    }
+  ],
+  "legacyImports": false
+}
