@@ -3,7 +3,8 @@ run: create-cluster tilt
 .PHONY: create-cluster
 create-cluster:
 	k3d cluster create local-dev \
-	  --registry-create local-dev-registry
+		--registry-create local-dev-registry \
+		-v $$HOME/.config/gcloud/application_default_credentials.json:/root/.config/gcloud/application_default_credentials.json
 
 .PHONY: destroy-cluster
 destroy-cluster:
