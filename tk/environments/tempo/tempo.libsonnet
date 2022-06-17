@@ -8,6 +8,10 @@ minio + tempo_microservices + tempo_scaling + tempo_tracing + {
   _config+:: {
     search_enabled: true,
 
+    vulture+: {
+      replicas: 0,
+    },
+
     ingester+: {
       pvc_size: '1Gi',
       pvc_storage_class: 'local-path',
@@ -41,14 +45,22 @@ minio + tempo_microservices + tempo_scaling + tempo_tracing + {
     // override storage config to get Tempo to talk to minio
     storage+: {
       trace+: {
+        cache: 'redis',
         s3+: {
           endpoint: 'minio:9000',
           access_key: 'admin',
           secret_key: 'supersecret',
           insecure: true,
+          // insecure_skip_verify: true,
+        },
+        memcached: {},
+        redis: {
+          endpoint: 'redis:6379',
         },
       },
     },
+
+
   },
 
   local k = import 'ksonnet-util/kausal.libsonnet',

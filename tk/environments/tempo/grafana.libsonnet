@@ -53,7 +53,7 @@ local mixins = import 'mixins.libsonnet';
         derivedFields: [
           {
             datasourceUid: 'Tempo',
-            matcherRegex: 'traceID=(\\w+)',
+            matcherRegex: '(?:traceID|traceid)=(\\w+)',
             name: 'TraceID',
             url: '$${__value.raw}',
           },
