@@ -1,19 +1,22 @@
+local agent = import 'agent.libsonnet';
 local grafana = import 'grafana.libsonnet';
-local loki = import 'loki.libsonnet';
+// local loki = import 'loki.libsonnet';
 local prometheus = import 'prometheus.libsonnet';
 local tempo = import 'tempo.libsonnet';
 
-local usage_stats = import 'usage_stats/usage_stats.libsonnet';
+// local usage_stats = import 'usage_stats/usage_stats.libsonnet';
 
 local minio = import 'minio/minio.libsonnet';
 local redis = import 'redis/redis.libsonnet';
 
+
 grafana
 + tempo
 + prometheus
-+ loki
++ agent
+// + loki
 
-+ usage_stats
+// + usage_stats
 
 + minio
 + redis
@@ -29,6 +32,8 @@ grafana
   _config+:: {
     cluster: 'k3d-local-dev',
     namespace: 'default',
+
+    grafana_cloud: local_config.grafana_cloud,
 
     // whether to send traces to local Tempo, this creates a feedback loop but
     // results in more and richer traces

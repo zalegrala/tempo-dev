@@ -8,10 +8,6 @@ minio + tempo_microservices + tempo_scaling + tempo_tracing + {
   _config+:: {
     search_enabled: true,
 
-    vulture+: {
-      replicas: 0,
-    },
-
     ingester+: {
       pvc_size: '1Gi',
       pvc_storage_class: 'local-path',
